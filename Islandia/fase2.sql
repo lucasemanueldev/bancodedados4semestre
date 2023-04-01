@@ -74,12 +74,6 @@ VALUES
   (9, 8, '2020-09-02', 450),
   (10, 5, '2021-04-03', 300);
 
--- JOIN: para juntar informações de duas ou mais tabelas com base em uma coluna em comum --
-SELECT f.nome as fazenda, fr.nome as fruta, c.data_colheita, c.quantidade
-FROM fazendas f
-JOIN colheitas c ON f.id = c.fazenda_id
-JOIN frutas fr ON fr.id = c.fruta_id;
-
 -- INNER JOIN: para obter informações que existem em ambas as tabelas --
 SELECT fr.nome as fruta, c.data_colheita, c.quantidade
 FROM frutas fr
